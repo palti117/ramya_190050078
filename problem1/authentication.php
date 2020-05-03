@@ -17,8 +17,7 @@
         $password = mysqli_real_escape_string($con, $password);  
       
         $sql = "select *from login where username = '$username' and password = '$password'";  
-        $result = mysqli_query($con, $sql);  
-        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
+        $result = mysqli_query($con, $sql);   
         $count = mysqli_num_rows($result);  
           
         if($count == 1){  
